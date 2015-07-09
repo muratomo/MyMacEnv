@@ -1,0 +1,2 @@
+# setupMyMac
+my Mac setup
