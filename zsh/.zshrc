@@ -84,7 +84,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ll="ls -lhA"
-alias conect_csl="ssh -i ~/.ssh/csl_rsa tmurakami@csl"
 
 if [ -e /usr/local/share/zsh-completioms ]; then
 	fpath=(/usr/local/share/zsh-completions $fpath)

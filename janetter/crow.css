@@ -1,0 +1,805 @@
+@charset'utf-8';
+
+/* Body */
+body{
+	background-color: #333;
+	background-position: 50px 23px;
+}
+::selection{
+	background: #efefef;
+	color: #111;
+}
+
+/* Main menu */
+#menu{
+	position: fixed;
+	left:0;
+	top:0;
+	bottom:0;
+	width:50px;
+	height:auto;
+	background-color: #222;
+	cursor: default;
+}
+#header{
+	padding-left:50px;
+}
+#main{
+	top: 33px;
+	left:50px;
+	width:auto;
+	right:0;
+}
+#footer{
+	left:50px;
+	width:auto;
+	right:0;
+}
+/* Main menu icon */
+.menu-item{
+	display: block;
+	margin: 4px 0 20px;
+	--margin-top: 4px;
+	position: relative;
+}
+.menu-item.home{
+	padding-top: 14px;
+}
+.menu-item > div{
+	opacity: 0.6;
+	margin-left: auto;
+	margin-right: auto;
+}
+.menu-item:hover > div{
+	opacity: 0.9;
+}
+.menu-item-bottom{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 4px 24px 6px 6px;
+	border-top: 1px solid #111;
+	background: -webkit-gradient(linear,left top,left bottom,from(#333),color-stop(0.4,#222),to(#111));
+}
+.menu-item-bottom:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	border-top: 1px solid #555;
+}
+.menu-item-bottom > .options > div{
+	opacity: 0.6;
+}
+.menu-item-bottom > .options:hover > div{
+	opacity: 1.0;
+}
+.menu-icon-home{
+	width: 28px;
+	height: 28px;
+	background-image: url(../images/menu_sprite.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.menu-icon-mention{
+	width: 28px;
+	height: 28px;
+	background-image: url(../images/menu_sprite.png);
+	background-repeat: no-repeat;
+	background-position: -28px 0;
+}
+.menu-icon-direct{
+	width: 28px;
+	height: 28px;
+	background-image: url(../images/menu_sprite.png);
+	background-repeat: no-repeat;
+	background-position: -56px 0;
+}
+.menu-icon-list{
+	width: 28px;
+	height: 28px;
+	background-image: url(../images/menu_sprite.png);
+	background-repeat: no-repeat;
+	background-position: -84px 0;
+}
+.menu-icon-search{
+	width: 28px;
+	height: 28px;
+	background-image: url(../images/menu_sprite.png);
+	background-repeat: no-repeat;
+	background-position: -112px 0;
+}
+.menu-icon-gear{
+	width: 20px;
+	height: 16px;
+	background-image: url(../images/gear_s_on.png);
+	background-repeat: no-repeat;
+}
+
+/* Unread Count */
+.menu-item:hover{
+	text-decoration: none;
+}
+.menu-item > .menu-unread-area{
+	position: absolute;
+	height: 20px;
+	bottom: -18px;
+	left: 0;
+	right: 1px;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	opacity: 1.0 !important;
+	cursor: default;
+}
+.menu-unread-area > span{
+	font-family:Helvetica,Arial,sans-serif;
+	color: #BBB;
+	text-decoration: none;
+	cursor: pointer;
+}
+.icon-number-s{
+	background-image: url(../images/numbers.png);
+	opacity: 0.9;
+}
+.icon-number-s.num0{
+	background-position: 0px 0px;
+}
+.icon-number-s.num1{
+	width: 6px;
+	background-position: -8px 0px;
+}
+.icon-number-s.num2{
+	background-position: -14px 0px;
+}
+.icon-number-s.num3{
+	background-position: -21px 0px;
+}
+.icon-number-s.num4{
+	background-position: -28px 0px;
+}
+.icon-number-s.num5{
+	background-position: -35px 0px;
+}
+.icon-number-s.num6{
+	width: 8px;
+	background-position: -42px 0px;
+}
+.icon-number-s.num7{
+	background-position: -50px 0px;
+}
+.icon-number-s.num8{
+	background-position: -57px 0px;
+}
+.icon-number-s.num9{
+	width: 8px;
+	background-position: -64px 0px;
+}
+.icon-number-s.plus{
+	background-position: -72px 0px;
+}
+div.timeline-tab-unread{
+	height: 9px;
+	width: 9px;
+	background-position: 0 0;
+	top: 11px;
+	background-image: url(../../../Common/images/timeLine/unread.png);
+}
+
+/* Timeline icon */
+.timeline-title-icon, .timeline-tab-icon, .menu-popup-icon{
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+}
+.timeline-title-icon{
+	background-image: url(../../../Common/images/silver/icon_sprite.png);
+	opacity: 0.8;
+}
+.menu-popup-icon, .timeline-tab-icon{
+	background-image: url(../../../Common/images/gray/icon_sprite.png);
+}
+.mini-icon-home{
+	background-position: 0 0;
+}
+.mini-icon-mention{
+	background-position: -16px 0;
+}
+.mini-icon-message{
+	background-position: -32px 0;
+}
+.mini-icon-list{
+	background-position: -48px 0;
+}
+.mini-icon-search{
+	background-position: -64px 0;
+}
+.notice .timeline-title .icon-notice{
+	display: block;
+	background-position: 0 -16px;
+}
+.icon-gear:hover{
+	background-position: -198px 0;
+}
+.icon-read:hover{
+	background-position: -198px -16px;
+}
+.icon-notice:hover,
+.notice .timeline-title .icon-notice:hover{
+	background-position: -198px -32px;
+}
+.icon-close:hover{
+	background-position: -198px -48px;
+}
+
+/* Timeline */
+#timeline-view-wrapper{
+	left: 0;
+	right: 0;
+}
+li.timeline-container-placeholder > div{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+	left: 10px;
+	border: 4px dashed #666;
+	border-radius: 10px;
+	background-color: transparent;
+}
+#timeline-view > li.timeline-container-dragging{
+	background-color: #333;
+}
+#timeline-view > li.timeline-first .timeline-title {
+	border-top-left-radius: 0;
+	border-left-width: 0;
+}
+#timeline-view > li.timeline-last .timeline-title {
+	border-top-right-radius: 0;
+	border-right-width: 0;
+}
+.timeline-title{
+	background: -webkit-gradient(linear,left top,left bottom,from(#333333),color-stop(0.4,#242424),to(#242424));
+	border-top: 0px solid #777;
+	border-right: 1px solid rgba(20,20,20,0.3);
+	border-left-width: 0px;
+	height: 23px;
+}
+.timeline-title-text{
+	font-weight: bold;
+	color: #BBB;
+	top: 2px;
+}
+.tweet-container{
+	color: #CCC;
+}
+.timeline-main{
+	top: 23px;
+	background: transparent;
+	border-right: 1px solid rgba(20,20,20,0.3);
+}
+.timeline-main::-webkit-scrollbar{
+	width: 7px;
+}
+.timeline-main::-webkit-scrollbar-thumb{
+	border-top: 1px solid #555;
+	background: -webkit-gradient(linear,left top,right top,from(#555),to(#444));
+	border-radius: 0;
+}
+.timeline-main::-webkit-scrollbar-track{
+	margin: 12px 0 0 0;
+}
+.bottom-new > .timeline-main::-webkit-scrollbar-track{
+	margin: 0 0 12px 0;
+}
+.timeline-scroll-button{
+	position: absolute;
+	top: 24px;
+	right: 0;
+	width: 7px;
+	height: 10px;
+}
+.timeline-scroll-button > div{
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: 5px;
+	height: 10px;
+	background: url(../images/scrollbutton.png) no-repeat;
+	background-position: 0 0 !important;
+}
+.timeline-scroll-button > div{
+	opacity: 1;
+}
+.timeline-scroll-button > div:hover{
+	opacity: 0.8;
+}
+.bottom-new .timeline-scroll-button{
+	top: auto;
+	bottom: 0;
+}
+.bottom-new .timeline-scroll-button > div{
+	top: auto;
+	bottom: -2px;
+	background: url(../images/scrollbutton.png) no-repeat;
+	background-position: -5px 0 !important;
+}
+/* tab */
+#timeline-tabs-bar{
+	border-top: 1px solid #111;
+	border-left: 1px solid #111;
+	background-color: #222;
+}
+#timeline-tabs-bar:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	border-top: 1px solid #555;
+}
+#timeline-tabs-bar:after{
+	content: '';
+	position: absolute;
+	top: 1px;
+	left: 0;
+	bottom: 0;
+	border-left: 1px solid #444;
+}
+#timeline-tabs-bar > li.timeline-tab > div{
+	border-radius: 2px;
+	margin: 3px 2px;
+	background-color: rgba(255,255,255,0.4);
+}
+#timeline-tabs-bar > li.timeline-tab.active > div{
+	background-color: rgba(255,255,255,0.7);
+}
+#timeline-tabs-bar > li.timeline-tab.ui-sortable-helper > div{
+	border-color: rgba(102,102,102,0.4);
+}
+span.timeline-tab-text{
+	color: #446;
+}
+/* tweet */
+.tweet-container,
+.displayArea{
+	background: none;
+	border:none;
+	border-right: 1px solid rgba(20,20,20,0.3);
+}
+.tweet-container:before,
+.displayArea:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 0;
+	border-top: 1px solid rgba(120,120,120,0.3);
+}
+.tweet-container:after,
+.displayArea:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 0;
+	border-bottom: 1px solid rgba(20,20,20,0.3);
+}
+.timeline-main > div:first-child:after{
+	border-top-color: transparent;
+}
+.tweet-background,
+.reply .tweet-background,
+.mytweet .tweet-background{
+	background: -webkit-gradient(linear,left top,left bottom,from(rgba(64,64,64,0.6)),color-stop(0.1, rgba(59,59,59,0.6)),color-stop(0.9, rgba(59,59,59,0.6)),to(rgba(54,54,54,0.6)));
+}
+.reply .tweet-background:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,255,0.2);
+}
+.mytweet .tweet-background:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,255,0,0.2);
+}
+
+.tweet-shadow{
+	background: none;
+	border: none;
+}
+.tweet-focus-frame{
+	border: none !important;
+}
+li:focus .tweet-container.focus .tweet-background,
+li:focus .displayArea.focus .tweet-focus-frame{
+	background: -webkit-gradient(linear,left top,left bottom,from(rgba(44,44,44,0.6)),color-stop(0.1, rgba(49,49,49,0.6)),color-stop(0.9, rgba(49,49,49,0.6)),to(rgba(54,54,54,0.6)));
+}
+li:focus .tweet-container.focus:before,
+li:focus .displayArea.focus:before{
+	border-top: 1px solid rgba(20,20,20,0.1);
+}
+li:focus .tweet-container.focus:after,
+li:focus .displayArea.focus:after{
+	border-bottom: 1px solid rgba(80,80,80,0.3);
+}
+.gapArea {
+	margin: 3px 0 0;
+	height: 34px;
+}
+a{
+	color: #828282;
+}
+a:hover, .tweet-header a:hover, .tweet-header a:hover .displayname > .name, .tweet-footer a:hover, div.tweet-reply-box a:hover{
+	color: #cccccc;
+}
+div.tweet-reply {
+	color: #afafaf;
+	border-top: none;
+}
+.tweet-reply:after {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 0;
+	border-top: 1px solid rgba(20,20,20,0.3);
+	border-bottom: 1px solid rgba(120,120,120,0.3);
+}
+.tweet-thumb{
+	position: relative;
+	border-top: none;
+}
+.tweet-thumb.disp:before{
+	content: '';
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 0;
+	border-top: 1px solid rgba(20,20,20,0.3);
+	border-bottom: 1px solid rgba(120,120,120,0.3);
+}
+.displayname > .name,
+.displayname > .subname {
+	color: #afafaf;
+}
+.geopin{
+	background-image: url(../../../Common/images/timeLine/geopin.png);
+}
+.protected{
+	background-image: url(../../../Common/images/timeLine/key.png);
+}
+span.friend{
+	background-image: url(../../../Common/images/timeLine/smile2.png);
+}
+.main-profile img,
+.main-profile canvas{
+	padding-top: 1px;
+	-webkit-box-shadow:none;
+}
+.sub-profile img,
+.sub-profile canvas{
+	-webkit-box-shadow:none;
+}
+.sub-profile-dm img,
+.sub-profile-dm canvas{
+	-webkit-box-shadow:none;
+}
+.tl-icon-reply,
+.tl-icon-fav,
+.tl-icon-rt{
+	background-image: url(../../../Common/images/twitter/everything-spritev2_2.png);
+}
+.timeline-title .icon-gear,
+.timeline-title .icon-read,
+.timeline-title .icon-notice,
+.timeline-title .icon-close {
+		opacity: 0.8;
+}
+.tl-icon-gear{
+	background-image: url(../../../Common/images/timeLine/gear2.png);
+}
+.icon-reply-wait:before{
+	border-radius: 2px;
+	background-color: rgba(255,255,255,1);
+	box-shadow: -4px  2px 0 rgba(255,255,255,.85),
+				-6px  6px 0 rgba(255,255,255,.7),
+				-4px 10px 0 rgba(255,255,255,.55),
+				 0px 12px 0 rgba(255,255,255,.4),
+				 4px 10px 0 rgba(255,255,255,.25),
+				 6px  6px 0 rgba(255,255,255,.1),
+				 4px  2px 0 rgba(255,255,255,0);
+}
+
+.timeline-conversationContainer {
+	background-color: rgba(204, 204, 204, 0.6);
+}
+.timeline-conversationWrapper {
+	background-color: #333;
+}
+.conversation-title {
+	background: -webkit-gradient(linear,left top,left bottom,from(#333),color-stop(0.4,#242424),to(#242424));
+	background: -webkit-linear-gradient(top, #333, #242424 40%, #242424);
+	background: linear-gradient(to bottom, #333, #242424 40%, #242424);
+	border-bottom: rgba(0, 0, 0, 0.3);
+	border-radius: 3px 3px 0 0;
+}
+.conversation-title-text {
+	color: #bbb;
+}
+.message-container .tweet-box{
+	-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.8);
+}
+.conversation-edit {
+	background: #111;
+	border-top: 1px solid #333;
+}
+.conversation-edit .message-edit{
+	background-color: transparent;
+}
+
+/* Tweet Edit */
+#tweet-edit-bar {
+	border-top: solid 1px rgb(204,204,204);
+	border: none;
+	background-image: none;
+	background-color: #111;
+	min-height: 33px !important;
+}
+#footer > #tweet-edit-bar{
+	background-color: #222;
+	border-left: 1px solid #111;
+}
+#footer > #tweet-edit-bar:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	border-left: 1px solid #444;
+}
+.tweet-edit-box{
+	border-radius: 3px;
+	border: 1px solid rgb(204,204,204);
+}
+.tweet-edit-box:before{
+	border-left-color: rgb(187,187,187);
+}
+#tweet-edit-container input:focus{
+	border-color: transparent;
+	outline-color: #888;
+	-webkit-box-shadow: 0 0 4px #888;
+}
+#tweet-edit-container input{
+	background-color: #EFEFEF;
+}
+#tweet-edit-container > .compact {
+	padding: 1px;
+	margin: 0px;
+}
+#footer #tweet-edit-container > .compact {
+	padding-top: 0px;
+}
+#header .compact .tweet-edit-account{
+	top: 2px;
+	width: 29px;
+	height: 29px;
+	left: 3px;
+}
+#footer .compact .tweet-edit-account{
+	top: 0px;
+	width: 29px;
+	height: 29px;
+	left: 3px;
+}
+#header .expanded .tweet-edit-account{
+	top: 0px;
+}
+.tweet-edit-account img.profile-image {
+	-webkit-box-shadow:none;
+}
+#tweet-edit-container > .expanded{
+	background-color: transparent;
+	-webkit-box-shadow: 0 0 0 transparent;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	padding: 1px 1px 1px 0;
+	margin: 0px;
+	border-color: transparent;
+	opacity: 0.92;
+}
+#footer #tweet-edit-container > .expanded{
+	border: none;
+	bottom: 0;
+	padding: 0 1px 1px 0;
+}
+#tweet-edit-container .tweet-counter{
+	color: #777;
+}
+#tweet-edit-container a.button{
+	border-radius: 2px;
+	background-image: none;
+	background-color: #666;
+	color: #FFF;
+	border: 1px solid rgb(68,68,68);
+}
+#tweet-edit-container a.button:hover{
+	background-color: #494949;
+}
+#tweet-edit-container a.button.disabled,
+#tweet-edit-container a.button.disabled:hover{
+	color: #777;
+	border: 1px solid #777;
+	background-color: transparent;
+}
+@-webkit-keyframes editfadein01{
+	0%{opacity:0.7}
+	100%{opacity:1}
+}
+@-webkit-keyframes editfadeout01{
+	0%{opacity:1}
+	100%{opacity:0.7}
+}
+.compact .tweet-edit-box{
+	opacity: 0.7;
+	-webkit-animation: 500ms editfadeout01;
+}
+.compact .tweet-edit-box:hover{
+	opacity: 1;
+	-webkit-animation: 1000ms editfadein01;
+}
+.tweet-edit::-webkit-input-placeholder{
+	color: #AAA;
+}
+.edit-replyto-title{
+	background-color: rgba(136,136,136,0.8);
+	border-radius: 0;
+}
+.edit-replyto-tweet-box{
+	background-color: rgb(255,255,255);
+	border-radius: 0;
+}
+.edit-replyto-tweet-box:after{
+	border-right: 7px solid rgb(255,255,255);
+	border-top: 6px solid transparent;
+	border-bottom: 9px solid transparent;
+}
+.compact .tweet-edit-account img.profile-image {
+	margin: 0 0 0 0;
+	height: 29px;
+	width: 29px;
+}
+.compact .tweet-edit-box{
+	margin: 2px 0 2px 34px;
+}
+#footer .compact .tweet-edit-box{
+	margin: 0 0 0 34px;
+}
+.expanded .tweet-edit-box{
+	margin: 1px 0 2px 49px;
+}
+.tweet-edit-box{
+	background-color: rgba(255,255,255,0.8);
+}
+.tweet-edit-box:before{
+	border: none;
+}
+.tweet-edit-box:after{
+	border: none;
+}
+.tweet-edit-box > div{
+	margin: 2px 2px 0px 5px;
+}
+.tweet-edit{
+	background-color: transparent;
+}
+.compact .tweet-edit{
+	padding-top: 4px;
+	min-height: 14px;
+	height: 14px;
+}
+#header #tweet-edit-container > .expanded > .wait{
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+/* Dialog */
+.ui-widget-overlay {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+#conf-content .conf-main .conf-menu{
+	color: #888;
+}
+#conf-content .conf-main > .tab03 > .box02 >.popuppos > div.active{
+	background-color: #BBB;
+}
+:focus .ui-selecting{
+	background-color: #888 !important;
+	color: #FFF;
+}
+:focus .ui-selected{
+	background-color: #888 !important;
+	color: #FFF;
+}
+#newlist-content > div > .newlist-menu{
+	color: #888;
+}
+
+/* MenuPopup */
+#menuPopup > div.menuPopup_up{
+	top: 18px;
+	left: 1px;
+	border-top: 9px solid transparent;
+	border-right: 9px solid #DDD;
+	border-bottom: 9px solid transparent;
+	border-left: 0;
+}
+#menuPopup > div.menuPopup_up2{
+	top: 17px;
+	left: 1px;
+	border-top: 10px solid transparent;
+	border-right: 10px solid rgba(204,204,204,0.7);
+	border-bottom: 10px solid transparent;
+	border-left: 0;
+}
+#menuPopup > div.menuPopup_body{
+	width: auto;
+	right: 0;
+	left: 10px;
+	background: #DDD;
+	border-color: rgba(204,204,204,0.7);
+}
+.menuPopup_list li.newSearch {
+	background: transparent !important;
+}
+.searchBox{
+	background: rgba(255,255,255,0.3);
+}
+.menuPopup_list li.menuPopup_list_item_open{
+	background: rgba(255,200,255,0.7);
+}
+.menuPopup_list li.menuPopup_list_item_hover{
+	background: #BBB;
+}
+
+/* Others */
+#notification-bar div{
+	background-color: rgba(0,0,0,0.4);
+	-webkit-box-shadow: 2px 2px 2px rgba(170,170,170,0.7);
+	border-radius: 2px;
+	color: #FFF;
+}
+#notification-bar div span{
+	color: #FFF;
+}
+#notification-bar .undo {
+	color: #FFF;
+}
+div.translate_popup > .translate_popup_text{
+	background-color: rgba(102,102,102,0.8);
+	color:#FFF;
+}
+::-webkit-scrollbar-thumb{
+	background: -webkit-gradient(linear,left top,right top,from(#555),to(#444));
+}
+.ui-menu .ui-menu-item a{
+	color: #222;
+}
